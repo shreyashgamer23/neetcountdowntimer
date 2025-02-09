@@ -98,8 +98,8 @@ function App() {
 
         {/* Footer */}
         <footer className="text-center text-sm text-gray-400 py-4">
-          <p>© 2025 NEET Countdown Timer. All rights reserved.</p>
           <p>Developed By EpexAyush</p>
+          <p>© 2025 NEET Countdown Timer. All rights reserved.</p>
           <p className="mt-2">
             Time synchronized with Indian Standard Time (IST) | Powered by World Time API
           </p>
