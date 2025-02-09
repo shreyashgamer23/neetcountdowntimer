@@ -74,8 +74,7 @@ function App() {
           <p className="text-gray-300 leading-relaxed mb-6">
             This website is designed for NEET 2025 aspirants to keep track of their exam countdown in a 
             visually appealing and interactive way. The live countdown timer displays the remaining days, 
-            hours, minutes, and seconds until NEET UG 2025. The exam consists of 180 questions from Physics, 
-            Chemistry, and Biology (Botany & Zoology).
+            hours, minutes, and seconds until NEET UG 2025.
           </p>
           <div className="grid md:grid-cols-2 gap-4 text-sm">
             <div className="flex items-center gap-2">
