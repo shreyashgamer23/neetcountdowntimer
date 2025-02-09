@@ -41,7 +41,7 @@ function App() {
             NEET UG 2025 Countdown
           </h1>
           <p className="text-lg md:text-xl text-gray-300">
-            Your journey to success begins here
+            Stay updated with the NEET UG 2025 countdown timer. Plan your studies efficiently with an interactive NEET 2025 countdown clock.
           </p>
         </div>
 
