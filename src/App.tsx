@@ -38,7 +38,7 @@ function App() {
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12 pt-8">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-            NEET UG 2025 Countdown
+            NEET UG 2025 COUNTDOWN
           </h1>
           <p className="text-lg md:text-xl text-gray-300">
            Plan your studies efficiently with an interactive NEET 2025 countdown clock.
