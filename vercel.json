@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+      { "source": "/neet-2026", "destination": "/" }
+    ]
+  }
+  
