@@ -1,15 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { Clock, BookOpen, Calendar, Timer, MessageCircle, Link } from 'lucide-react';
+import Neet2026 from './Neet2026';
 
-function App() {
-  const [timeLeft, setTimeLeft] = useState({
+function Home() {
+  const navigate = useNavigate();
+  const [timeLeft, setTimeLeft] = React.useState({
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0
   });
 
-  useEffect(() => {
+  React.useEffect(() => {
     const targetDate = new Date('2025-05-04T14:00:00+05:30'); // Indian time (IST)
 
     const calculateTimeLeft = () => {
@@ -34,7 +37,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white">
-      {/* Hero Section */}
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12 pt-8">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
@@ -46,7 +48,7 @@ function App() {
         </div>
 
         {/* Countdown Timer */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-8">
           <div className="bg-gray-900/80 backdrop-blur-lg rounded-lg p-6 text-center border border-gray-800">
             <div className="text-4xl md:text-6xl font-bold mb-2">{timeLeft.days}</div>
             <div className="text-sm uppercase tracking-wide">Days</div>
@@ -63,6 +65,24 @@ function App() {
             <div className="text-4xl md:text-6xl font-bold mb-2">{timeLeft.seconds}</div>
             <div className="text-sm uppercase tracking-wide">Seconds</div>
           </div>
+        </div>
+
+        {/* NEET 2026 Button */}
+        <div className="text-center mb-12">
+          <button 
+            onClick={() => navigate('/neet-2026')}
+            className="bg-gradient-to-r from-gray-800 to-gray-900 text-white font-bold py-3 px-8 rounded-lg text-lg 
+            shadow-[0_0_15px_rgba(0,0,0,0.2)] hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] 
+            border border-gray-700/50 transition-all duration-300 
+            backdrop-blur-lg backdrop-brightness-125 
+            hover:scale-105 hover:from-gray-700 hover:to-gray-800
+            relative overflow-hidden
+            before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/5 before:to-transparent
+            before:translate-x-[-200%] before:transition-transform before:duration-[0.7s] before:hover:translate-x-[200%]
+            active:scale-95"
+          >
+            NEET 2026
+          </button>
         </div>
 
         {/* Info Cards */}
@@ -189,6 +209,17 @@ function App() {
         </footer>
       </div>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/neet-2026" element={<Neet2026 />} />
+      </Routes>
+    </Router>
   );
 }
 
